@@ -1,0 +1,6 @@
+framework module Pods_Unsplash_with_storyboard_tutorial {
+  umbrella header "Pods-Unsplash_with_storyboard_tutorial-umbrella.h"
+
+  export *
+  module * { export * }
+}
