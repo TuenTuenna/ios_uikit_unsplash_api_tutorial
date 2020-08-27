@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2534455B9971988F0D83F72F /* Pods_Unsplash_with_storyboard_tutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7411BA6D5E324975F67AC4C3 /* Pods_Unsplash_with_storyboard_tutorial.framework */; };
+		F2A1925024F7D1E20071AB01 /* MyAlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A1924F24F7D1E20071AB01 /* MyAlamofireManager.swift */; };
+		F2A1925224F7D2BC0071AB01 /* BaseInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A1925124F7D2BC0071AB01 /* BaseInterceptor.swift */; };
+		F2A1925424F7D5F90071AB01 /* MyLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A1925324F7D5F90071AB01 /* MyLogger.swift */; };
+		F2A1925824F7D8630071AB01 /* MySearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A1925724F7D8630071AB01 /* MySearchRouter.swift */; };
 		F2A2337424EF580B00CF4767 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A2337324EF580B00CF4767 /* AppDelegate.swift */; };
 		F2A2337624EF580B00CF4767 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A2337524EF580B00CF4767 /* SceneDelegate.swift */; };
 		F2A2337824EF580B00CF4767 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A2337724EF580B00CF4767 /* HomeVC.swift */; };
@@ -24,6 +28,10 @@
 		4E96503D67BADE5E53E0A376 /* Pods-Unsplash_with_storyboard_tutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unsplash_with_storyboard_tutorial.debug.xcconfig"; path = "Target Support Files/Pods-Unsplash_with_storyboard_tutorial/Pods-Unsplash_with_storyboard_tutorial.debug.xcconfig"; sourceTree = "<group>"; };
 		7411BA6D5E324975F67AC4C3 /* Pods_Unsplash_with_storyboard_tutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Unsplash_with_storyboard_tutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE54F59F8AABC70CB6059329 /* Pods-Unsplash_with_storyboard_tutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unsplash_with_storyboard_tutorial.release.xcconfig"; path = "Target Support Files/Pods-Unsplash_with_storyboard_tutorial/Pods-Unsplash_with_storyboard_tutorial.release.xcconfig"; sourceTree = "<group>"; };
+		F2A1924F24F7D1E20071AB01 /* MyAlamofireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlamofireManager.swift; sourceTree = "<group>"; };
+		F2A1925124F7D2BC0071AB01 /* BaseInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInterceptor.swift; sourceTree = "<group>"; };
+		F2A1925324F7D5F90071AB01 /* MyLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLogger.swift; sourceTree = "<group>"; };
+		F2A1925724F7D8630071AB01 /* MySearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySearchRouter.swift; sourceTree = "<group>"; };
 		F2A2337024EF580B00CF4767 /* Unsplash_with_storyboard_tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unsplash_with_storyboard_tutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2A2337324EF580B00CF4767 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2A2337524EF580B00CF4767 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +75,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F2A1924E24F7D1CC0071AB01 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				F2A1924F24F7D1E20071AB01 /* MyAlamofireManager.swift */,
+				F2A1925724F7D8630071AB01 /* MySearchRouter.swift */,
+				F2A1925324F7D5F90071AB01 /* MyLogger.swift */,
+				F2A1925124F7D2BC0071AB01 /* BaseInterceptor.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		F2A2336724EF580B00CF4767 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +107,7 @@
 		F2A2337224EF580B00CF4767 /* Unsplash_with_storyboard_tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				F2A1924E24F7D1CC0071AB01 /* API */,
 				F2A2338C24EF6F8800CF4767 /* Utils */,
 				F2A2337324EF580B00CF4767 /* AppDelegate.swift */,
 				F2A2337524EF580B00CF4767 /* SceneDelegate.swift */,
@@ -236,9 +256,13 @@
 			files = (
 				F2A2337824EF580B00CF4767 /* HomeVC.swift in Sources */,
 				F2A2337424EF580B00CF4767 /* AppDelegate.swift in Sources */,
+				F2A1925824F7D8630071AB01 /* MySearchRouter.swift in Sources */,
+				F2A1925224F7D2BC0071AB01 /* BaseInterceptor.swift in Sources */,
 				F2A2337624EF580B00CF4767 /* SceneDelegate.swift in Sources */,
 				F2A2338824EF5A7100CF4767 /* UserListVC.swift in Sources */,
+				F2A1925024F7D1E20071AB01 /* MyAlamofireManager.swift in Sources */,
 				F2A2338A24EF5AB900CF4767 /* PhotoCollectionVC.swift in Sources */,
+				F2A1925424F7D5F90071AB01 /* MyLogger.swift in Sources */,
 				F2A2339024EF70BA00CF4767 /* BaseVC.swift in Sources */,
 				F2A2338E24EF6F9600CF4767 /* Constants.swift in Sources */,
 			);
