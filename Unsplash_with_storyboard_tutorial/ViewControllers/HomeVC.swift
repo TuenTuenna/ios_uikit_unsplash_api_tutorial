@@ -8,8 +8,9 @@
 
 import UIKit
 import Toast_Swift
+import Alamofire
 
-class HomeVC: UIViewController, UISearchBarDelegate, UIGestureRecognizerDelegate {
+class HomeVC: BaseVC, UISearchBarDelegate, UIGestureRecognizerDelegate {
 
     @IBOutlet weak var searchFilterSegment: UISegmentedControl!
     
@@ -147,11 +148,50 @@ class HomeVC: UIViewController, UISearchBarDelegate, UIGestureRecognizerDelegate
     
     
     //MARK: - IBAction methods
-    
+    // 검색버튼이 클릭 되었을때
     @IBAction func onSearchButtonClicked(_ sender: UIButton) {
         print("HomeVC - onSearchButtonClicked() called / selectedIndex:  \(searchFilterSegment.selectedSegmentIndex)")
+ 
+//        let url = API.BASE_URL + "search/photos"
+//
+        guard let userInput = self.searchBar.text else { return }
+//
+//        // 키, 밸류 형식의 딕셔너리
+//        let queryParam = ["query" : userInput, "client_id" : API.CLIENT_ID]
+        
+//        AF.request(url, method: .get, parameters: queryParam)
+//            .responseJSON(completionHandler: { response in
+//            debugPrint(response)
+//        })
+        
+        var urlToCall : URLRequestConvertible?
+        
+        switch searchFilterSegment.selectedSegmentIndex {
+        case 0:
+            urlToCall = MySearchRouter.searchPhotos(term: userInput)
+        case 1:
+            urlToCall = MySearchRouter.searchUsers(term: userInput)
+        default:
+            print("default")
+        }
+        
+        if let urlConvertible = urlToCall {
+            MyAlamofireManager
+                        .shared
+                        .session
+                        .request(urlConvertible)
+                        .validate(statusCode: 200..<401)
+                        .responseJSON(completionHandler: { response in
+            //                debugPrint(response)
+                        })
+        }
+        
+        
+        
+        
+        
         // 화면으로 이동
-        pushVC()
+//        pushVC()
     }
     
     @IBAction func searchFilterValueChanged(_ sender: UISegmentedControl) {
