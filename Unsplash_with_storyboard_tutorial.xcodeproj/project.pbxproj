@@ -22,6 +22,7 @@
 		F2A2338A24EF5AB900CF4767 /* PhotoCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A2338924EF5AB900CF4767 /* PhotoCollectionVC.swift */; };
 		F2A2338E24EF6F9600CF4767 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A2338D24EF6F9600CF4767 /* Constants.swift */; };
 		F2A2339024EF70BA00CF4767 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A2338F24EF70BA00CF4767 /* BaseVC.swift */; };
+		F2CF2FBC24F7F97E004A5F71 /* MyApiStatusLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CF2FBB24F7F97E004A5F71 /* MyApiStatusLogger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		F2A2338924EF5AB900CF4767 /* PhotoCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionVC.swift; sourceTree = "<group>"; };
 		F2A2338D24EF6F9600CF4767 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F2A2338F24EF70BA00CF4767 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		F2CF2FBB24F7F97E004A5F71 /* MyApiStatusLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApiStatusLogger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				F2A1925724F7D8630071AB01 /* MySearchRouter.swift */,
 				F2A1925324F7D5F90071AB01 /* MyLogger.swift */,
 				F2A1925124F7D2BC0071AB01 /* BaseInterceptor.swift */,
+				F2CF2FBB24F7F97E004A5F71 /* MyApiStatusLogger.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				F2A2338A24EF5AB900CF4767 /* PhotoCollectionVC.swift in Sources */,
 				F2A1925424F7D5F90071AB01 /* MyLogger.swift in Sources */,
 				F2A2339024EF70BA00CF4767 /* BaseVC.swift in Sources */,
+				F2CF2FBC24F7F97E004A5F71 /* MyApiStatusLogger.swift in Sources */,
 				F2A2338E24EF6F9600CF4767 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
