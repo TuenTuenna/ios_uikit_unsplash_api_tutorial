@@ -168,23 +168,50 @@ class HomeVC: BaseVC, UISearchBarDelegate, UIGestureRecognizerDelegate {
         
         switch searchFilterSegment.selectedSegmentIndex {
         case 0:
-            urlToCall = MySearchRouter.searchPhotos(term: userInput)
+//            urlToCall = MySearchRouter.searchPhotos(term: userInput)
+            
+            MyAlamofireManager
+                        .shared
+                        .getPhotos(searchTerm: userInput,
+                                   // 클로저 arc
+                                   // automatic reference count
+                                   // 자동 메모리사용수 계산
+                                   // stack, heap 메모리 영역
+                                   // class, closure 등이 사용
+                                   // weak self
+                                   // self 는 메모리 카운트를 증가
+                                   // weak self 를 통해 메모리를 가지고 있는 것을 방지
+                                   // 다음과 같이  self.메소드등 self 를 사용해야 하는 경우 weak self 로 메모리에 계속 잡고 두고 있는 것을 방지
+                                   completion: { [weak self] result in
+                                    
+                guard let self = self else { return }
+                
+                switch result {
+                case .success(let fetchedPhotos):
+                    print("HomeVC - getPhotos.success - fetchedPhotos.count : \(fetchedPhotos.count)")
+                case .failure(let error):
+                    print("HomeVC - getPhotos.failure - error : \(error.rawValue)")
+                    self.view.makeToast(error.rawValue, duration: 1.0, position: .center)
+                }
+            })
+            
         case 1:
             urlToCall = MySearchRouter.searchUsers(term: userInput)
         default:
             print("default")
         }
         
-        if let urlConvertible = urlToCall {
-            MyAlamofireManager
-                        .shared
-                        .session
-                        .request(urlConvertible)
-                        .validate(statusCode: 200..<401)
-                        .responseJSON(completionHandler: { response in
-            //                debugPrint(response)
-                        })
-        }
+//        if let urlConvertible = urlToCall {
+//            MyAlamofireManager
+//                .shared
+//                .session
+//                .request(urlConvertible)
+//                .validate(statusCode: 200..<401)
+//                .responseJSON(completionHandler: { response in
+//                    print("HomeVC - response : \(response)")
+//                    print("HomeVC - response.error : \(response.error)")
+//                })
+//        }
         
         
         
@@ -193,6 +220,9 @@ class HomeVC: BaseVC, UISearchBarDelegate, UIGestureRecognizerDelegate {
         // 화면으로 이동
 //        pushVC()
     }
+    
+    
+    
     
     @IBAction func searchFilterValueChanged(_ sender: UISegmentedControl) {
 //        print("HomeVC - searchFilterValueChanged() called / index : \(sender.selectedSegmentIndex)")

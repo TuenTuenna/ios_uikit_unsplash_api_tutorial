@@ -22,15 +22,15 @@ class BaseInterceptor: RequestInterceptor {
         request.addValue("application/json; charset=UTF-8", forHTTPHeaderField: "Accept")
         
 //        // 공통 파라매터 추가
-//        var dictionary = [String:String]()
-//
-//        dictionary.updateValue(API.CLIENT_ID, forKey: "client_id")
-//
-//        do {
-//            request = try URLEncodedFormParameterEncoder().encode(dictionary, into: request)
-//        } catch {
-//            print(error)
-//        }
+        var dictionary = [String:String]()
+
+        dictionary.updateValue(API.CLIENT_ID, forKey: "client_id")
+
+        do {
+            request = try URLEncodedFormParameterEncoder().encode(dictionary, into: request)
+        } catch {
+            print(error)
+        }
 
         completion(.success(request))
         
