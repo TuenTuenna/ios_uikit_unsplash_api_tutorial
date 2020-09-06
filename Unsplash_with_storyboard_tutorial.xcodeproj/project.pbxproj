@@ -22,6 +22,8 @@
 		F2A2338A24EF5AB900CF4767 /* PhotoCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A2338924EF5AB900CF4767 /* PhotoCollectionVC.swift */; };
 		F2A2338E24EF6F9600CF4767 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A2338D24EF6F9600CF4767 /* Constants.swift */; };
 		F2A2339024EF70BA00CF4767 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A2338F24EF70BA00CF4767 /* BaseVC.swift */; };
+		F2AF499925049E5000DB9C47 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AF499825049E5000DB9C47 /* Photo.swift */; };
+		F2AF499B25049EA700DB9C47 /* MyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AF499A25049EA700DB9C47 /* MyError.swift */; };
 		F2CF2FBC24F7F97E004A5F71 /* MyApiStatusLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CF2FBB24F7F97E004A5F71 /* MyApiStatusLogger.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		F2A2338924EF5AB900CF4767 /* PhotoCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionVC.swift; sourceTree = "<group>"; };
 		F2A2338D24EF6F9600CF4767 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F2A2338F24EF70BA00CF4767 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		F2AF499825049E5000DB9C47 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		F2AF499A25049EA700DB9C47 /* MyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyError.swift; sourceTree = "<group>"; };
 		F2CF2FBB24F7F97E004A5F71 /* MyApiStatusLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApiStatusLogger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +114,7 @@
 		F2A2337224EF580B00CF4767 /* Unsplash_with_storyboard_tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				F2AF499725049E4300DB9C47 /* Model */,
 				F2A1924E24F7D1CC0071AB01 /* API */,
 				F2A2338C24EF6F8800CF4767 /* Utils */,
 				F2A2337324EF580B00CF4767 /* AppDelegate.swift */,
@@ -138,8 +143,17 @@
 			isa = PBXGroup;
 			children = (
 				F2A2338D24EF6F9600CF4767 /* Constants.swift */,
+				F2AF499A25049EA700DB9C47 /* MyError.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		F2AF499725049E4300DB9C47 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F2AF499825049E5000DB9C47 /* Photo.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,7 +277,9 @@
 				F2A1925224F7D2BC0071AB01 /* BaseInterceptor.swift in Sources */,
 				F2A2337624EF580B00CF4767 /* SceneDelegate.swift in Sources */,
 				F2A2338824EF5A7100CF4767 /* UserListVC.swift in Sources */,
+				F2AF499925049E5000DB9C47 /* Photo.swift in Sources */,
 				F2A1925024F7D1E20071AB01 /* MyAlamofireManager.swift in Sources */,
+				F2AF499B25049EA700DB9C47 /* MyError.swift in Sources */,
 				F2A2338A24EF5AB900CF4767 /* PhotoCollectionVC.swift in Sources */,
 				F2A1925424F7D5F90071AB01 /* MyLogger.swift in Sources */,
 				F2A2339024EF70BA00CF4767 /* BaseVC.swift in Sources */,
